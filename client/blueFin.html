@@ -1,0 +1,31 @@
+<head>
+  <title>blueFin</title>
+</head>
+
+<body>
+  <h1>Here it comes...</h1>
+
+  {{> Home}}
+</body>
+
+<template name="Home">
+
+    <table>
+        <tr>
+            <td>id</td>
+            <td>type</td>
+            <td>units</td>
+            <td>value</td>
+        </tr>
+        <tr>
+            {{#each allReports}}
+            <td>{{sensors.[0].id}}</td>
+            <td>{{sensors.[0].type}}</td>
+            <td>{{sensors.[0].units}}</td>
+            <td>{{sensors.[0].value}}</td>
+            {{/each}}
+
+        </tr>
+    </table>
+
+</template>
