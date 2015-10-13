@@ -27,36 +27,3 @@ Router.route('deviceReport', {
     });
   }
 });
-
-
-// Router.route('deviceReport', function () {
-//     path: '/devicereport/:deviceId',
-//     where: 'server'
-//
-//     action: function() {
-//         var res = this.response;
-//         var req = this.request;
-//         var body = req.body;
-//
-//         // get the deviceId from collection
-//         deviceId = this.params.deviceId;
-//
-//         check(body, {
-//             time: Number,
-//             sensors: Array,
-//         }); // FIXME: better check for parameters
-//
-//         DeviceReports.insert(body);
-//
-//         res.send(201);
-//
-//
-//
-//
-//     }
-//
-//
-//
-// });
-//
-//
