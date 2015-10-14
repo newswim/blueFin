@@ -1,1 +1,14 @@
 /* CSS declarations go here */
+
+table {
+    font-size: 22px;
+}
+
+tr, td {
+    padding: 10px;
+}
+
+.navbar-default {
+    background-color: rgba(100,124,155,.3);
+    border-color: rgba(100,124,155,.9);
+}
