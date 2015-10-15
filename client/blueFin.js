@@ -1,7 +1,13 @@
 Template.Home.helpers({
     allReports: function () {
       return DeviceReports.find({});
-    }
+    },
+    prettifyDate: function(timestamp){
+	  if(!timestamp){
+	    return "";
+	  }
+	  return moment(timestamp).calendar();
+	},
 })
 
 

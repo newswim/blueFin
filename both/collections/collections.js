@@ -1,6 +1,7 @@
 DeviceReports = new Mongo.Collection('devicereports');
 
 if (typeof Schema === 'undefined') Schema = {};
+
 Schema.Sensor = new SimpleSchema({
   id: {
     type: String,
@@ -15,19 +16,21 @@ Schema.Sensor = new SimpleSchema({
   },
   value: {
     type: Number,
+    decimal: true,
   }
 });
 
 Schema.DeviceReports = new SimpleSchema({
-  time: {  // Expert User who did the work.
-    type: Number,
-    min:0,
-  },
+  // time: {  // Expert User who did the work.
+  //   type: Number,
+  //   min:0,
+  // },
   sensors: {
     type: [Schema.Sensor],
     min:1,
   },
 });
+
 DeviceReports.attachSchema(Schema.DeviceReports);
 
 // Save Server time because devices will be out of sync
@@ -59,4 +62,5 @@ Schema.AutoTimestamps = new SimpleSchema({
     optional: true
   },
 });
+
 DeviceReports.attachSchema(Schema.AutoTimestamps);

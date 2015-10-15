@@ -22,6 +22,7 @@
                     <td>type</td>
                     <td>units</td>
                     <td>value</td>
+                    <td>time</td>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +32,7 @@
                     <td>{{sensors.[0].type}}</td>
                     <td>{{sensors.[0].units}}</td>
                     <td>{{sensors.[0].value}}</td>
+                    <td>{{prettifyDate createdAt}}</td>
                 </tr>
                 {{/each}}
             </tbody>
