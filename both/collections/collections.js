@@ -12,7 +12,7 @@ Schema.Sensor = new SimpleSchema({
   },
   units: {
     type: String,
-    allowedValues: ['°C', 'mg/L', 'µs/cm', 'ppm', 'null'],
+    allowedValues: ['C', 'mg/L', 'us/cm', 'ppm', 'null'],
   },
   value: {
     type: Number,
