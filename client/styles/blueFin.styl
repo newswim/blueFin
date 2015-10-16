@@ -21,12 +21,13 @@ _orange = rgba(230, 158, 21, .8)
 /* column height */
 
 .col-md-6
-    height 37vh
+    height 45vh
     text-align center
 
 .container
     // color bisque
     // text-shadow 5px 5px 5px black
+    margin-bottom 20px
 
 
 /* General helpers */
@@ -40,12 +41,16 @@ _orange = rgba(230, 158, 21, .8)
     padding-top 20px
 
 .data-wrapper
-    color white
-    font-size 6rem
+    color rgba(10, 10, 10, .8);
+    font-size 8rem
 
 .multi-wrapper
-    font-size 3rem
-    display inline-block
+
+    // display inline-block
+    > tr, td
+        // display inline-flex
+        padding 1px
+        font-size 2.4rem
 
 /* just changing BootStrap for the hell of it... */
 
@@ -62,3 +67,9 @@ _orange = rgba(230, 158, 21, .8)
 .navbar
     font-family 'Indie Flower', cursive
     font-size 20px
+
+.navbar-nav
+    float right
+
+.navbar-brand
+    font-size 29px

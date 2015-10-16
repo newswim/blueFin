@@ -13,20 +13,21 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 blue">
-            <div class="report-block"><h3>Temperature</h3></div>
+            <div class="report-block"><h1>Temperature</h1></div>
             <div class="data-wrapper">
                 {{#with findByTemp}}
                     <div class="data-text">
-                        {{sensors.[0].value}}
+                        {{sensors.[0].value}} ˚C
                     </div>
                 {{/with}}
             </div>
         </div>
 
         <div class="col-md-6 red">
-            <div class="report-block"><h3>Disolved Oxygen</h3></div>
+            <div class="report-block"><h1>pH</h1></div>
             <div class="data-wrapper">
-                {{#with findByDO}}
+
+                {{#with findByPH}}
                     {{sensors.[0].value}}
                 {{/with}}
             </div>
@@ -36,41 +37,47 @@
 
     <div class="row">
         <div class="col-md-6 yellow">
-            <div class="report-block"><h3>pH</h3></div>
+            <div class="report-block"><h1>Disolved Oxygen</h1></div>
             <div class="data-wrapper">
-
-                {{#with findByPH}}
-                    {{sensors.[0].value}}
+                {{#with findByDO}}
+                    {{sensors.[0].value}} mg/L
                 {{/with}}
             </div>
+
         </div>
 
         <div class="col-md-6 orange">
-            <div class="report-block"><h3>Conductivity</h3></div>
+            <div class="report-block"><h1>Conductivity</h1></div>
             <div class="multi-wrapper">
+            <table class="table">
             <tr>
-                <td>EC
+                <td>Electrical
                 </td>
                 {{#with findByEC}}
                 <td>
-                    {{sensors.[0].value}}
+                    {{sensors.[0].value}} µs/cm
                 </td>
                 {{/with}}
-                <td>Sa
+            </tr>
+            <tr>
+                <td>Saline
                 </td>
                 {{#with findBySa}}
                 <td>
                     {{sensors.[0].value}}
                 </td>
                 {{/with}}
-                <td>TDS
+            </tr>
+            <tr>
+                <td>Disolved Solids
                 </td>
                 {{#with findByTDS}}
                 <td>
-                    {{sensors.[0].value}}
+                    {{sensors.[0].value}} ppm
                 </td>
                 {{/with}}
             </tr>
+            </table>
             </div>
         </div>
     </div> <!-- /.row -->
