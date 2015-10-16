@@ -8,11 +8,11 @@ Schema.Sensor = new SimpleSchema({
   },
   type: {
     type: String,
-    allowedValues: ['temperature', 'dissolvedOxygen', 'conductivity', 'pH', 'waterLevel'],
+    allowedValues: ['Temperature', 'Dissolved Oxygen', 'Electrical Conductivity', 'pH', 'Salinity', 'Total Dissolved Solids'],
   },
   units: {
     type: String,
-    allowedValues: ['Celsius', 'oxygens', 'ohms', 'pH', 'waters'],
+    allowedValues: ['°C', 'mg/L', 'µs/cm', 'ppm', 'null'],
   },
   value: {
     type: Number,
