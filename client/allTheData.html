@@ -1,0 +1,32 @@
+<template name="AllTheData">
+
+<span class="total-reports">Total Reports: {{totalReports}}</span>
+
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>id</td>
+                    <td>type</td>
+                    <td>units</td>
+                    <td>value</td>
+                    <td>time</td>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each allReports}}
+                <tr>
+                    <td>{{sensors.[0].id}}</td>
+                    <td>{{sensors.[0].type}}</td>
+                    <td>{{sensors.[0].units}}</td>
+                    <td>{{sensors.[0].value}}</td>
+                    <td>{{prettifyDate createdAt}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</template>
