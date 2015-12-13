@@ -27,4 +27,6 @@ d3js:d3
 twbs:bootstrap
 momentjs:moment
 zimme:active-route
-stylus
+sacha:spin
+meteorhacks:fast-render
+stolinski:stylus-multi
